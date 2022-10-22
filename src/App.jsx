@@ -9,6 +9,7 @@ import Posts from "./components/Posts";
 import NewPostForm from "./components/MakePosts";
 import SinglePostView from "./components/SinglePostView";
 import Profile from "./components/Profile.Jsx";
+import TestComponent from "./components/TestComponent";
 
 function App() {
   const { user, setToken, token } = useAuth();
@@ -21,12 +22,13 @@ function App() {
           element={<Register setToken={setToken} />}
         />
         <Route path="/" element={<Posts token={token} />} />
+        <Route path="/profile" element={<Profile user={user} />} />
         <Route path="/makepost" element={<NewPostForm token={token} />} />
         <Route
           path="/singlepost/:postId"
           element={<SinglePostView token={token} />}
         />
-        <Route path='/profile' element={<Profile user={user} />} />
+        <Route path="/testComponent" element={<TestComponent />}/>
       </Routes>
     </div>
   );
