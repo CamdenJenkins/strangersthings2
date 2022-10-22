@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+
 import styles from "../styles/Nav.module.css";
 
 const NavBar = ({ user, setToken }) => {
@@ -11,7 +11,7 @@ const NavBar = ({ user, setToken }) => {
       <Link className={styles.home} to="/">
         Home
       </Link>
-      <Link to='/profile'>Profile</Link>
+      <Link className={styles.profile} to='/profile'>Profile</Link>
       <Link className={styles.addpost} to="/makepost">
         Add Post
       </Link>
