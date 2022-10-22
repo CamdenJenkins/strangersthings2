@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { fetchMe } from "./api/auth";
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Register from "./components/Register";
