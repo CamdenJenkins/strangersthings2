@@ -8,7 +8,7 @@ import Posts from "./components/Posts";
 import NewPostForm from "./components/MakePosts";
 import SinglePostView from "./components/SinglePostView";
 import Profile from "./components/Profile";
-import TestComponent from "./components/TestComponent";
+
 
 function App() {
   const { user, setToken, token } = useAuth();
@@ -27,7 +27,7 @@ function App() {
           path="/singlepost/:postId"
           element={<SinglePostView token={token} />}
         />
-        <Route path="/testComponent" element={<TestComponent />}/>
+        
       </Routes>
     </div>
   );
