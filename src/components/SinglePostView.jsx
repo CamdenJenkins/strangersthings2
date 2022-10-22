@@ -33,7 +33,7 @@ const SinglePostView = ({ token }) => {
       <div className={styles.price}>Price: {singlePost.price}</div>
       <div>{singlePost.willDeliver}</div>
       <Messages postId={singlePost._id} />
-      <div> {singlePost.messages}</div>
+      
       <button
         id={styles.button}
         className="pure-button pure-button-primary"

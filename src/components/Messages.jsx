@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { postMessage } from "../api/posts";
 import useAuth from "../hooks/useAuth";
+import styles from '../styles/Messages.module.css'
 const Messages = ({ postId }) => {
   const { token } = useAuth();
   const [message, setMessage] = useState("");
   return (
     <div>
-      <form
+      <form 
         onSubmit={async (e) => {
           e.preventDefault();
           const result = await postMessage(token, postId, message);
@@ -14,7 +15,7 @@ const Messages = ({ postId }) => {
           return result;
         }}
       >
-        <label>Message User:</label>
+        <label className={styles.label}>Message User:</label>
         <input
           value={message}
           type="text"
@@ -22,10 +23,10 @@ const Messages = ({ postId }) => {
             setMessage(e.target.value);
           }}
         ></input>
-        <button className="pure-button pure-button-primary" type="submit">
+        <button id={styles.button} className="pure-button pure-button-primary" type="submit">
           Send
         </button>
-        <div>{}</div>
+        
       </form>
     </div>
   );
