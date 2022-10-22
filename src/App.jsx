@@ -10,6 +10,7 @@ import SinglePostView from "./components/SinglePostView";
 import Profile from "./components/Profile";
 
 
+
 function App() {
   const { user, setToken, token } = useAuth();
   return (

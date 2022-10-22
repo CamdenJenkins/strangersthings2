@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  background-color: blue;
+  
 }
 /* .form {
   display: flex;
